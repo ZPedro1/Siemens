@@ -1,0 +1,124 @@
+<html>
+
+<head>
+<title>Projeto Siemens</title>
+<script>
+	var n1;
+	var n2;
+	var res;
+	
+	function somar(){
+		n1 = document.getElementById("txtN1").value;
+		n2 = document.getElementById("txtN2").value;
+		res = parseFloat(n1) + parseFloat(n2);
+		
+		alert(res);
+	}
+	
+	function subtrair(){
+		n1 = document.getElementById("txtN1").value;
+		n2 = document.getElementById("txtN2").value;
+		res = parseFloat(n1) - parseFloat(n2);
+		
+		alert(res);
+	}
+	
+	function multiplicar(){
+		n1 = document.getElementById("txtN1").value;
+		n2 = document.getElementById("txtN2").value;
+		res = parseFloat(n1) * parseFloat(n2);
+		
+		alert(res);
+	}
+	
+	function dividir(){
+		n1 = document.getElementById("txtN1").value;
+		n2 = document.getElementById("txtN2").value;
+		res = parseFloat(n1) / parseFloat(n2);
+		
+		alert(res);
+	}
+	
+	function numToPower(){ 
+		n1 = document.getElementById("b").value; 
+		n2 = document.getElementById("exp").value; 
+	
+		res = Math.pow(parseInt(n1), parseInt(n2));
+	
+		alert(res);
+	} 
+	
+	function fatorial(){
+		n1 = document.getElementById("f1").value;
+	
+		res = parseInt(n1);
+	
+		while(parseInt(n1) > 1){
+			n1--;
+			res = res * n1; 
+		}
+		
+		alert(res);
+	}
+	
+	function decToBin(){
+		n1 = document.getElementById("dec1").value;
+		
+		var bin = '';
+		
+		while(parseInt(n1) > 0){
+			res = parseInt(n1) % 2;
+			
+			bin = res + bin;
+			
+			n1 = parseInt(n1/2);
+		}
+	
+		alert(bin);
+    
+	}
+	
+</script>
+</head>
+
+<body>
+	
+	<h1>Contas normais</h1>
+	1º Número: <input type="number" id="txtN1" placeholder="Insira o primero nº"/>
+	<br><br>
+	2º Número: <input type="number" id="txtN2" placeholder="Insira o segundo nº"/>
+	<br><br>
+	
+	<input type="button" value="+" onclick="somar()"/> &nbsp
+	<input type="button" value="-" onclick="subtrair()"/> &nbsp
+	<input type="button" value="*" onclick="multiplicar()"/> &nbsp
+	<input type="button" value="/" onclick="dividir()"/> &nbsp
+	<br><br><br>
+	
+	
+	 <h1>NumToThePow</h1> 
+	 Base: <input type="number" id="b" placeholder="Insira o valor da base"/> 
+	 <br><br> 
+	 Expoente: <input type="number" id="exp" placeholder="Insira o valor do expoente"/> 
+	 <br><br> 
+	 
+	 <input type="button" value="Calcular" onclick="numToPower()"/>
+	 <br><br><br> 
+	
+	
+	<h1>Fatorial</h1>
+	Número: <input type="number" id="f1" placeholder="Insira o nº que quiser"/> 
+	<br><br>
+	<input type="button" value="Calcular" onclick="fatorial()"/>
+	<br><br><br>
+	
+	
+	<h1>DecToBinConvertion</h1>
+	Número: <input type="number" id="dec1" placeholder="Insira o nº que quiser"/>
+	<br><br>
+	<input type="button" value="Calcular" onclick="decToBin()"/>
+	<br><br><br>
+	
+</body>
+
+</html>
